@@ -3,8 +3,9 @@ class Asiento:
         self.color=color
         self.precio=precio
         self.registro=registro
+
     def cambiarColor(self,Piel):
-        if Piel=="rojo"or Piel=="verde"or Piel=="amarillo"or Piel=="negro"or Piel=="blanco":
+        if Piel=="rojo" or  Piel=="verde" or Piel=="amarillo" or Piel=="negro" or Piel=="blanco":
             self.color=Piel
 
 
@@ -16,6 +17,7 @@ class Motor:
 
     def cambiarRegistro (self,a):
         self.registro=a
+
     def asignarTipo(self,newtipo):
         if newtipo in ["gasolina","electrico"]:
             self.tipo=newtipo
@@ -39,6 +41,7 @@ class Auto:
             if type(h)==Asiento:
                 c+=1
         return c
+    
     def VerificarIntegridad(self):
         for h in self.asientos:
             if isinstance(h,Asiento)==True and (self.registro!=h.registro or h.registro !=self.motor.registro) :
