@@ -42,7 +42,7 @@ class Auto:
                 c+=1
         return c
     
-    def verificar_integridad(self):
+    def verificarIntegridad(self):
         registro_auto = self.registro
         for asiento in self.asientos:
             if asiento.registro != registro_auto and self.motor.registro != registro_auto:
