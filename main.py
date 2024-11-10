@@ -5,7 +5,7 @@ class Asiento:
         self.registro=registro
     def cambiarColor(self,Piel):
         if Piel=="rojo"or Piel=="verde"or Piel=="amarillo"or Piel=="negro"or Piel=="blanco":
-            self.piel=Piel
+            self.color=Piel
 
 
 class Motor:
@@ -24,14 +24,14 @@ class Motor:
 
 
 class Auto:
-    def __init__(self,modelo,precio,asientos,marca,motor,registro,cantidadCreados) :
+    cantidadCreados=0
+    def __init__(self,modelo,precio,asientos,marca,motor,registro) :
         self.modelo=modelo
         self.precio=precio
         self.asientos=asientos
         self.marca=marca
         self.motor=motor
         self.registro=registro
-        self.cantidadCreados=cantidadCreados
     
     def cantidadAsientos(self):
         c=0
